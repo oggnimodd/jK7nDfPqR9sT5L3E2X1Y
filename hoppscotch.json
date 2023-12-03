@@ -1,0 +1,180 @@
+[
+  {
+    "v": 1,
+    "name": "Go Test",
+    "folders": [
+      {
+        "v": 1,
+        "name": "Auth",
+        "folders": [],
+        "requests": [
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/auth/register",
+            "name": "Register",
+            "params": [],
+            "headers": [],
+            "method": "POST",
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n \"name\": \"John Doe 10001\",\n \"email\": \"test2@email.com\",\n \"password\": \"password\",\n \"passwordConfirm\": \"password\",\n \"photo\": \"photo_url\"\n}\n"
+            }
+          },
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/auth/login",
+            "name": "SignIn",
+            "params": [],
+            "headers": [],
+            "method": "POST",
+            "auth": {
+              "authType": "none",
+              "authActive": true
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n  \"email\": \"test2@email.com\",\n  \n  \"password\": \"password\"\n}"
+            }
+          }
+        ]
+      },
+      {
+        "v": 1,
+        "name": "User",
+        "folders": [],
+        "requests": [
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/users/me     ",
+            "name": "User Info",
+            "params": [],
+            "headers": [],
+            "method": "GET",
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "<<AUTH_TOKEN>>"
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": null,
+              "body": null
+            }
+          }
+        ]
+      },
+      {
+        "v": 1,
+        "name": "Post",
+        "folders": [],
+        "requests": [
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/posts",
+            "name": "Create Post",
+            "params": [],
+            "headers": [],
+            "method": "POST",
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "<<AUTH_TOKEN>>"
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n\t\"title\": \"for deletion\",\n\t\"content\": \"This is the content of my second post\",\n\t\"image\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL52gd7V5ovPZ-KDXdID2FNHg5ekxirVnHLy6MYpel&s\"\n}"
+            }
+          },
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/posts",
+            "name": "Post List",
+            "params": [],
+            "headers": [],
+            "method": "GET",
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "<<AUTH_TOKEN>>"
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": null,
+              "body": null
+            }
+          },
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/posts/24b20a50-f356-497d-b9ad-7ced6700fa60",
+            "name": "Edit Post",
+            "params": [],
+            "headers": [],
+            "method": "PUT",
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "<<AUTH_TOKEN>>"
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n\t\"title\": \"My second post edited\"\n}"
+            }
+          },
+          {
+            "v": "1",
+            "endpoint": "<<BASE_URL>>/posts/24b20a50-f356-497d-b9ad-7ced6700fa60",
+            "name": "Edit Post - Duplicate",
+            "params": [],
+            "headers": [],
+            "method": "PUT",
+            "auth": {
+              "authType": "bearer",
+              "authActive": true,
+              "token": "<<AUTH_TOKEN>>"
+            },
+            "preRequestScript": "",
+            "testScript": "",
+            "body": {
+              "contentType": "application/json",
+              "body": "{\n\t\"title\": \"My second post edited\"\n}"
+            }
+          }
+        ]
+      }
+    ],
+    "requests": [
+      {
+        "v": "1",
+        "endpoint": "<<BASE_URL>>/healthchecker",
+        "name": "Health Checker",
+        "params": [],
+        "headers": [],
+        "method": "GET",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "preRequestScript": "",
+        "testScript": "",
+        "body": {
+          "contentType": null,
+          "body": null
+        }
+      }
+    ]
+  }
+]
