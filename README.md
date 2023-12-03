@@ -51,6 +51,21 @@ go run main.go
 
 The application will start on port 8081. You can access the application by navigating to `http://localhost:8081` in your web browser.
 
+## Testing the API Response using Hoppscotch
+
+Hoppscotch is a free, fast, and beautiful API request builder that lets you test and preview the API response. You can import the `hoppscotch.json` file to Hoppscotch to test the API endpoints of your application.
+
+The `hoppscotch.json` file contains the pre-configured requests for all the API endpoints of your application.
+
+To test the API response using Hoppscotch, follow these steps:
+
+1. Go to [Hoppscotch](https://hoppscotch.io/).
+2. Click on the "Import/Export" button in the top right corner.
+3. Select "Import from file" from the dropdown menu.
+4. Choose the `hoppscotch.json` file from your local system.
+5. The requests will be imported into Hoppscotch. You can now test the API endpoints by sending requests and previewing the responses.
+
+
 ## Endpoints
 
 The application provides the following endpoints:
