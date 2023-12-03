@@ -65,6 +65,8 @@ To test the API response using Hoppscotch, follow these steps:
 4. Choose the `hoppscotch.json` file from your local system.
 5. The requests will be imported into Hoppscotch. You can now test the API endpoints by sending requests and previewing the responses.
 
+![Demo](./ss/golang-demo.gif "Hoppscotch Demo")
+
 
 ## Endpoints
 
