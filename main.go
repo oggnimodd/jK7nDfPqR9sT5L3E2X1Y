@@ -44,6 +44,8 @@ func init() {
 }
 
 func main() {
+	initializers.Gen()
+
 	config, err := initializers.LoadConfig(".")
 	if err != nil {
 		log.Fatal("? Could not load environment variables", err)
